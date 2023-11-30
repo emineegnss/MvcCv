@@ -18,6 +18,7 @@ namespace MvcCv.Models.Entities
         public string Title { get; set; }
         public string Subtitle { get; set; }
         public string Description { get; set; }
-        public string Date { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime FinishDate { get; set; }
     }
 }

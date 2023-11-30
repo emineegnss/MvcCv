@@ -15,7 +15,7 @@ namespace MvcCv.Models.Entities
     public partial class TblContact
     {
         public int ID { get; set; }
-        public string AdSoyad { get; set; }
+        public string Name { get; set; }
         public string Mail { get; set; }
         public string Subject { get; set; }
         public string Message { get; set; }

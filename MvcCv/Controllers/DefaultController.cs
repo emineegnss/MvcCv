@@ -35,5 +35,23 @@ namespace MvcCv.Controllers
             var interests = db.TblInterests.ToList();
             return PartialView(interests);
         }
+        public PartialViewResult Certificate()
+        {
+            var certificate = db.TblCertificate.ToList();
+            return PartialView(certificate);
+        }
+        [HttpGet]
+        public PartialViewResult Contact()
+        {
+            return PartialView();
+        }
+        [HttpPost]
+        public PartialViewResult Contact(TblContact t)
+        {
+            t.Date = DateTime.Parse(DateTime.Now.ToShortDateString()) ;
+            db.TblContact.Add(t);
+            db.SaveChanges();
+            return PartialView();
+        }
     }
 }

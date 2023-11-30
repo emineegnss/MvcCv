@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c315aee79015485d9dfc7b07eed4c690" Name="Diagram1">
+      <Diagram DiagramId="de7eb68bfde74452add46f8af3dac34a" Name="Diagram1">
         <EntityTypeShape EntityType="DbCvModel.TblAbout" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbCvModel.TblAdmin" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbCvModel.TblCertificate" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />

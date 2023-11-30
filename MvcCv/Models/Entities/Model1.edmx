@@ -38,7 +38,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="AdSoyad" Type="varchar" MaxLength="100" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
           <Property Name="Mail" Type="varchar" MaxLength="100" />
           <Property Name="Subject" Type="varchar" MaxLength="100" />
           <Property Name="Message" Type="varchar" MaxLength="500" />
@@ -63,7 +63,8 @@
           <Property Name="Title" Type="varchar" MaxLength="100" />
           <Property Name="Subtitle" Type="varchar" MaxLength="150" />
           <Property Name="Description" Type="varchar(max)" />
-          <Property Name="Date" Type="varchar" MaxLength="50" />
+          <Property Name="StartDate" Type="date" />
+          <Property Name="FinishDate" Type="date" />
         </EntityType>
         <EntityType Name="TblInterests">
           <Key>
@@ -128,7 +129,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="AdSoyad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Mail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Subject" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
@@ -153,7 +154,8 @@
           <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Subtitle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StartDate" Type="DateTime" Precision="0" />
+          <Property Name="FinishDate" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="TblInterests">
           <Key>
@@ -221,7 +223,7 @@
             <EntityTypeMapping TypeName="DbCvModel.TblContact">
               <MappingFragment StoreEntitySet="TblContact">
                 <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Mail" ColumnName="Mail" />
                 <ScalarProperty Name="Subject" ColumnName="Subject" />
                 <ScalarProperty Name="Message" ColumnName="Message" />
@@ -248,7 +250,8 @@
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Subtitle" ColumnName="Subtitle" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="FinishDate" ColumnName="FinishDate" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -37,36 +37,36 @@
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Contact</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
     <!-- Page Content-->
     <div class="container-fluid p-0">
         <!-- About-->
-        @foreach(var x in Model)
+        @foreach (var x in Model)
         {
 
 
-        <section class="resume-section" id="about">
-            <div class="resume-section-content">
-                <h1 class="mb-0">
-                    @x.Name
-                    <span class="text-primary">@x.LastName</span>
-                </h1>
-                <div class="subheading mb-5">
-                    @x.Address · @x.Phone ·
-                    <a href="mailto:name@email.com">@x.Email</a>
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        @x.Name
+                        <span class="text-primary">@x.LastName</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        @x.Address · @x.Phone ·
+                        <a href="mailto:name@email.com">@x.Email</a>
+                    </div>
+                    <p class="lead mb-5">@x.Description</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="#"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
                 </div>
-                <p class="lead mb-5">@x.Description</p>
-                <div class="social-icons">
-                    <a class="social-icon" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="social-icon" href="#"><i class="fab fa-github"></i></a>
-                    <a class="social-icon" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a>
-                </div>
-            </div>
-        </section>
+            </section>
 
         }
         <hr class="m-0" />
@@ -93,50 +93,14 @@
         <hr class="m-0" />
         <!-- Awards-->
         <section class="resume-section" id="awards">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Awards & Certifications</h2>
-                <ul class="fa-ul mb-0">
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        Google Analytics Certified Developer
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        Mobile Web Specialist - Google Certification
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        1
-                        <sup>st</sup>
-                        Place - University of Colorado Boulder - Emerging Tech Competition 2009
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        1
-                        <sup>st</sup>
-                        Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        2
-                        <sup>nd</sup>
-                        Place - University of Colorado Boulder - Emerging Tech Competition 2008
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        1
-                        <sup>st</sup>
-                        Place - James Buchanan High School - Hackathon 2006
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        3
-                        <sup>rd</sup>
-                        Place - James Buchanan High School - Hackathon 2005
-                    </li>
-                </ul>
-            </div>
+            @Html.Action("Certificate")
         </section>
+        <hr class="m-0" />
+        <!-- Awards-->
+        <section class="resume-section" id="contact">
+            @Html.Action("Contact")
+        </section>
+
     </div>
     <!-- Bootstrap core JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
