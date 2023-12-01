@@ -37,13 +37,13 @@ namespace MvcCv.Controllers
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public ActionResult ExperienceGet(int id)
+        public ActionResult ExperienceEdit(int id)
         {
             TblExperience t = experienceRepository.Find(x => x.ID == id);
             return View(t);
         }
         [HttpPost]
-        public ActionResult ExperienceGet(TblExperience p)
+        public ActionResult ExperienceEdit(TblExperience p)
         {
             TblExperience t = experienceRepository.Find(x => x.ID == p.ID);
             t.Subtitle=p.Subtitle;

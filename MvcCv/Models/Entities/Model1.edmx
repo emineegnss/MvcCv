@@ -49,11 +49,12 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Title" Type="varchar" MaxLength="100" />
-          <Property Name="Subtitle" Type="varchar" MaxLength="100" />
-          <Property Name="Subtitle2" Type="varchar" MaxLength="100" />
-          <Property Name="GNO" Type="varchar" MaxLength="5" />
-          <Property Name="Date" Type="varchar" MaxLength="100" />
+          <Property Name="Institution" Type="varchar" MaxLength="100" />
+          <Property Name="Faculty" Type="varchar" MaxLength="100" />
+          <Property Name="Department" Type="varchar" MaxLength="100" />
+          <Property Name="GPA" Type="varchar" MaxLength="5" />
+          <Property Name="StartDate" Type="date" />
+          <Property Name="GraduationDate" Type="date" />
         </EntityType>
         <EntityType Name="TblExperience">
           <Key>
@@ -80,6 +81,7 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Skill" Type="varchar" MaxLength="100" />
+          <Property Name="Level" Type="tinyint" />
         </EntityType>
         <EntityContainer Name="DbCvModelStoreContainer">
           <EntitySet Name="TblAbout" EntityType="Self.TblAbout" Schema="dbo" store:Type="Tables" />
@@ -140,11 +142,12 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Subtitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Subtitle2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="GNO" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-          <Property Name="Date" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Institution" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Faculty" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Department" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="GPA" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="StartDate" Type="DateTime" Precision="0" />
+          <Property Name="GraduationDate" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="TblExperience">
           <Key>
@@ -171,6 +174,7 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Skill" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Level" Type="Byte" />
         </EntityType>
         <EntityContainer Name="DbCvEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TblAbout" EntityType="Self.TblAbout" />
@@ -235,11 +239,12 @@
             <EntityTypeMapping TypeName="DbCvModel.TblEducation">
               <MappingFragment StoreEntitySet="TblEducation">
                 <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Subtitle" ColumnName="Subtitle" />
-                <ScalarProperty Name="Subtitle2" ColumnName="Subtitle2" />
-                <ScalarProperty Name="GNO" ColumnName="GNO" />
-                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Institution" ColumnName="Institution" />
+                <ScalarProperty Name="Faculty" ColumnName="Faculty" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="GPA" ColumnName="GPA" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="GraduationDate" ColumnName="GraduationDate" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -269,6 +274,7 @@
               <MappingFragment StoreEntitySet="TblSkills">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Skill" ColumnName="Skill" />
+                <ScalarProperty Name="Level" ColumnName="Level" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

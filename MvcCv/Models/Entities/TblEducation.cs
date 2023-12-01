@@ -15,10 +15,11 @@ namespace MvcCv.Models.Entities
     public partial class TblEducation
     {
         public int ID { get; set; }
-        public string Title { get; set; }
-        public string Subtitle { get; set; }
-        public string Subtitle2 { get; set; }
-        public string GNO { get; set; }
-        public string Date { get; set; }
+        public string Institution { get; set; }
+        public string Faculty { get; set; }
+        public string Department { get; set; }
+        public string GPA { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime GraduationDate { get; set; }
     }
 }
