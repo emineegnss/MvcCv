@@ -28,13 +28,13 @@
             <td>@item.StartDate.ToShortDateString()</td>
             <td>@item.GraduationDate.ToShortDateString()</td>
             <td>
-                <a href="/Experience/ExperienceDelete/@item.ID" class="btn btn-outline-danger">
+                <a href="/Education/EducationDelete/@item.ID" class="btn btn-outline-danger">
                     <i class="fas fa-trash">
                     </i> Delete
                 </a>
             </td>
             <td>
-                <a href="/Experience/ExperienceEdit/@item.ID" class="btn btn-outline-primary">
+                <a href="/Education/EducationEdit/@item.ID" class="btn btn-outline-primary">
                     <i class="fas fa-pencil-alt">
                     </i> Edit
                 </a>
@@ -42,4 +42,4 @@
         </tr>
     }
 </table>
-<a href="/Experience/ExperienceAdd" class="btn btn-primary">Add New Experience </a>
+<a href="/Education/EducationAdd" class="btn btn-primary">Add New Education </a>

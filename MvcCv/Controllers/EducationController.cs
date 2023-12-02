@@ -17,5 +17,17 @@ namespace MvcCv.Controllers
             var education = educationRepository.List();
             return View(education);
         }
+        [HttpGet]
+        public ActionResult EducationAdd()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult EducationAdd(TblEducation e)
+        {
+            educationRepository.TAdd(e);
+            return RedirectToAction("Index");
+        }
+
     }
 }
