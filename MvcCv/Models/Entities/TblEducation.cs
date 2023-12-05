@@ -11,10 +11,13 @@ namespace MvcCv.Models.Entities
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TblEducation
     {
         public int ID { get; set; }
+
+        [Required(ErrorMessage = "Required Field")]
         public string Institution { get; set; }
         public string Faculty { get; set; }
         public string Department { get; set; }

@@ -25,7 +25,35 @@ namespace MvcCv.Controllers
         [HttpPost]
         public ActionResult EducationAdd(TblEducation e)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("EducationAdd");
+            }
             educationRepository.TAdd(e);
+            return RedirectToAction("Index");
+        }
+        public ActionResult EducationDelete(int id)
+        {
+            TblEducation t = educationRepository.Find(x => x.ID == id);
+            educationRepository.TRemove(t);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult EducationEdit(int id)
+        {
+            TblEducation t = educationRepository.Find(x => x.ID == id);
+            return View(t);
+        }
+        [HttpPost]
+        public ActionResult EducationEdit(TblEducation p)
+        {
+            TblEducation t = educationRepository.Find(x => x.ID == p.ID);
+            t.Institution = p.Institution;
+            t.Faculty = p.Faculty;
+            t.GPA = p.GPA;
+            t.StartDate = p.StartDate;
+            t.GraduationDate = p.GraduationDate;
+            educationRepository.TUpdate(t);
             return RedirectToAction("Index");
         }
 

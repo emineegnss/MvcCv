@@ -1,12 +1,11 @@
 ﻿@model MvcCv.Models.Entities.TblEducation
-
 @{
-    ViewBag.Title = "EducationAdd";
+    ViewBag.Title = "EducationEdit";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <br />
-<h4 style="color:crimson">Add New Skills Page</h4>
+<h4 style="color:crimson">Edit Education Page </h4>
 <br />
 
 <form method="post">
@@ -24,13 +23,12 @@
     @Html.TextBoxFor(x => x.GPA, new { @class = "form-control" })
     <br />
     @Html.Label(" Start Date")
-    @Html.TextBoxFor(x => x.StartDate, new { @class = "form-control", type = "date" })
+    @Html.TextBoxFor(x => x.StartDate, new { @class = "form-control" })
     <br />
     @Html.Label(" Graduation Date")
-    @Html.TextBoxFor(x => x.GraduationDate, new { @class = "form-control", type = "date" })
+    @Html.TextBoxFor(x => x.GraduationDate, new { @class = "form-control" })
     <br />
     <button class="btn btn-info">Save</button>
-   
-</form>
 
+</form>
 

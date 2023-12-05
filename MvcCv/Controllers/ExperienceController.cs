@@ -51,6 +51,7 @@ namespace MvcCv.Controllers
             t.Description = p.Description;
             t.StartDate = p.StartDate;
             t.FinishDate = p.FinishDate;
+            
             experienceRepository.TUpdate(t);
             return RedirectToAction("Index");
         }
